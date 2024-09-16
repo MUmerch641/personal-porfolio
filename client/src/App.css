@@ -472,7 +472,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .proj-imgbx img {
   width: 100%; /* Make sure the image fills the card */
-  height: auto; /* Maintain aspect ratio */
+  height: 45vh; /* Maintain aspect ratio */
 }
 
 .project-card {
@@ -769,7 +769,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 @media (max-width: 800px) {
+  .buttons{
+    display: flex;
+    flex-wrap: wrap;
+  }
   
+.project .nav.nav-pills {
+  width: 100%;
+}
   .newsletter-bx {
     display: flex ;
     justify-items: center;
@@ -802,6 +809,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
   .circular-background{
     overflow: hidden;
+  } 
+  .proj-imgbx img {
+    height: auto; /* Maintain aspect ratio */
   }
 }
 
@@ -923,7 +933,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	.timeline-dot{
 		left:0;
 	}
-
 }
 
 
@@ -964,17 +973,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #9542bb; /* Spotify green */
+  background-color:#7740ca ; /* Spotify green */
   border-radius: 10px; /* Rounded scrollbar */
   border: 2px solid transparent; /* Space around scrollbar thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #49215B; /* Slightly lighter green on hover */
+  background-color: #773dce; /* Slightly lighter green on hover */
 }
 
-/* For Firefox */
-* {
-  scrollbar-width: thin; /* Makes the scrollbar thinner */
-  scrollbar-color: #8f3fb4 transparent; /* Thumb color and track color */
+.nowrap{
+  
+  white-space: nowrap;
 }
