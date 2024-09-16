@@ -18,7 +18,7 @@ export const Footer = () => {
                 fontWeight: "bold",
               }}
             >
-              Abubakar
+              Umer
             </h1>
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">

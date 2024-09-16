@@ -40,7 +40,7 @@ export const NavBar = () => {
         <Container>
           <Navbar.Brand href="/">
           <h1 style={{ textTransform: 'uppercase', color: 'white', fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }}>
-  Abubakar
+  Umer
 </h1>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
