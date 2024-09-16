@@ -38,6 +38,10 @@ app.post('/contact', (req, res) => {
   });
 });
 
+app.get('/',(req,res)=>{
+  res.send("server running")
+})
+
 // Start the server
 const PORT = 5000;
 app.listen(PORT, () => {
