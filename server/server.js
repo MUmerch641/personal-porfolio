@@ -18,8 +18,24 @@ const transporter = nodemailer.createTransport({
 
 // Route to handle form submission
 app.post('/contact', (req, res) => {
+  const { firstName, lastName, email, phone, message } = req.body;
 
-  res.send("server running")
+  const mailOptions = {
+    from: email,
+    to: 'choudhry00641@gmail.com', // Replace with your receiving email address
+    subject: `New Contact Form Submission from ${firstName} ${lastName}`,
+    text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log('Error:', error);
+      return res.status(500).json({ success: false, message: 'Failed to send email' });
+    } else {
+      console.log('Email sent: ' + info.response);
+      return res.status(200).json({ success: true, message: 'Email sent successfully' });
+    }
+  });
 });
 
 app.get('/',(req,res)=>{
