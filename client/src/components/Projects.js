@@ -58,12 +58,16 @@ export const Projects = () => {
       title: 'RPS',
       description: 'Html,css,js',
       imgUrl: projImg4,
+      link:'https://mumerch641.github.io/-S-P-and-S-Game/',
+
+     
     },
     {
       id: 3,
       title: 'Bubble game',
       description: 'Html,css,js',
       imgUrl: projImg6,
+      link:' https://mumerch641.github.io/Bubble_Game/',
     },
   ];
 
@@ -76,7 +80,7 @@ export const Projects = () => {
       glare: false,      // Disable glare effect
       maxGlare: 0,       // No glare effect
       perspective: 1500, // Perspective for 3D effect
-      scale: 1,          // Scale on hover
+      scale: 1.1,          // Scale on hover
       reset: true        // Reset effect after mouse leaves
     });
 
