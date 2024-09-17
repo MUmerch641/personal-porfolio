@@ -65,7 +65,7 @@ export const Experience = () => {
             ease: "power2.out",
             scrollTrigger: {
               trigger: item,
-              start: "top 10%", // When the item enters 80% from the top of the viewport
+              start: "top 10%", // When the item enters 80% from the top of 
               toggleActions: "play none none none", // Only play the animation on enter
             },
           }

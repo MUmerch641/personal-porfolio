@@ -25,7 +25,7 @@ export const Projects = () => {
     },
     {
       id: 2,
-      title: 'Music Player',
+      title: 'Music Player app',
       description: 'Html,css,js',
       imgUrl: projImg1,
       link:'https://mumerch641.github.io/Best-music-player-/',
