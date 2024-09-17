@@ -54,17 +54,18 @@ export const Experience = () => {
         gsap.fromTo(
           item,
           {
-            x: "-100%", // Different directions based on index
+            x: "-110%", // Different directions based on index
             opacity: 0,
           },
           {
             x: 0,
             opacity: 1,
             duration: 1,
+            delay:0.5,
             ease: "power2.out",
             scrollTrigger: {
               trigger: item,
-              start: "top 100%", // When the item enters 80% from the top of the viewport
+              start: "top 10%", // When the item enters 80% from the top of the viewport
               toggleActions: "play none none none", // Only play the animation on enter
             },
           }
