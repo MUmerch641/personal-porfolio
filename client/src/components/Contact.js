@@ -29,10 +29,9 @@ export const Contact = () => {
   
     try {
       const form = e.target;
-      const formData = new FormData(form);
+      console.log(form);
       const response = await fetch(form.action, {
         method: form.method,
-        body: formData,
       });
   
       console.log('Form submitted, waiting for response...');
