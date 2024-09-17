@@ -27,27 +27,30 @@ export const Contact = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-
+  
     try {
-      // Using FormSubmit.co directly without fetch
       const form = e.target;
       const formData = new FormData(form);
       const response = await fetch(form.action, {
         method: form.method,
         body: formData,
       });
-      
+  
       if (response.ok) {
         setButtonText("Send");
         setFormDetails(formInitialDetails);
         setStatus({ success: true, message: "Message sent successfully" });
       } else {
+        const errorMsg = await response.text();  // Capture the response message
+        console.error("Error response:", errorMsg);
         setStatus({ success: false, message: "Something went wrong. Please try again." });
       }
     } catch (error) {
+      console.error("Error sending the message:", error);  // Log the error in the console
       setStatus({ success: false, message: "Error sending the message" });
     }
   };
+  
 
   return (
     <section className="contact" id="connect">
